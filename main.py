@@ -7,17 +7,17 @@ from bs4 import BeautifulSoup
 
 class NetworkTool:
     # 专家id
-    e_id = '9469'
+    e_id = '1100'
     # 病人id
-    patient_id = '23882'
+    patient_id = '118041'
     # 病人账号
-    phoneNumber = '13343463054'
+    phoneNumber = '18627162313'
     # 病人密码
-    password = '123123'
+    password = '123456'
     # 身份证
-    idCard = '422429197104073762'
+    idCard = '412828198004200267'
     # 姓名
-    patient_name = '朱汉红'
+    patient_name = '龚新艳'
 
     # # 专家id
     # e_id = '1100'
