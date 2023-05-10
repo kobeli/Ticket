@@ -9,15 +9,15 @@ class NetworkTool:
     # 专家id
     e_id = '1100'
     # 病人id
-    patient_id = '118041'
+    patient_id = '121014'
     # 病人账号
-    phoneNumber = '18627162313'
+    phoneNumber = '18696111822'
     # 病人密码
-    password = '123456'
+    password = 'tl714222'
     # 身份证
-    idCard = '412828198004200267'
+    idCard = '420106199207144021'
     # 姓名
-    patient_name = '龚新艳'
+    patient_name = '谭琳'
 
     # # 专家id
     # e_id = '1100'
