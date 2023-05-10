@@ -9,17 +9,17 @@ class NetworkTool:
     # 专家id
     e_id = '1100'
     # 日期
-    book_date = '2023-05-17'
+    book_date = '2023-05-21'
     # 病人id
-    patient_id = '120510'
+    patient_id = '121014'
     # 病人账号
-    phoneNumber = '15172531654'
+    phoneNumber = '18696111822'
     # 病人密码
-    password = 'ft752574'
+    password = 'tl714222'
     # 身份证
-    idCard = '420104198807110012'
+    idCard = '420106199207144021'
     # 姓名
-    patient_name = '江浩'
+    patient_name = '谭琳'
 
     # # 专家id
     # e_id = '1100'
