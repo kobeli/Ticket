@@ -8,6 +8,8 @@ from bs4 import BeautifulSoup
 class NetworkTool:
     # 专家id
     e_id = '1100'
+    # 日期
+    book_date = '2023-05-19'
     # 病人id
     patient_id = '121014'
     # 病人账号
@@ -54,13 +56,17 @@ class NetworkTool:
         url = self.baseUrl + '/getWinXinDoctorCon?e_id=' + self.e_id
         response = self.session.get(url)
         soup = BeautifulSoup(response.content, 'lxml')
+        time_labels = soup.find_all('em', {'class': 'c-f16 clearfix'})
         tags = soup.find_all('a')
-        for tag in tags:
+        for index, tag in enumerate(tags):
+            the_tag_date = time_labels[index].text
             if "预约(满)" in tag.text:
-                print('预约(满)')
+                print('预约(满)', the_tag_date)
             elif "停诊" in tag.text:
-                print('停诊')
+                print('停诊', the_tag_date)
             else:
+                if self.book_date not in the_tag_date:
+                    return False
                 js_func_string = str(tag['onclick']).replace('checkidCard (', '').replace(')', '').split(',')
                 print('Ticket:' + str(js_func_string))
                 self.d_id = js_func_string[0]
