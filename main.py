@@ -9,7 +9,7 @@ class NetworkTool:
     # 专家id
     e_id = '1100'
     # 日期
-    book_date = '2023-05-21'
+    book_date = '2023-05-20'
     # 病人id
     patient_id = '121014'
     # 病人账号
