@@ -11,15 +11,15 @@ class NetworkTool:
     # 日期
     book_date = '2023-05-27'
     # 病人id
-    patient_id = '122210'
+    patient_id = '122305'
     # 病人账号
-    phoneNumber = '18986956850'
+    phoneNumber = '18986956886'
     # 病人密码
-    password = 'hqz040911'
+    password = '123456'
     # 身份证
-    idCard = '429005200407270024'
+    idCard = '429005197702090427'
     # 姓名
-    patient_name = '何沁芷'
+    patient_name = '张莉'
 
     # # 专家id
     # e_id = '1100'
