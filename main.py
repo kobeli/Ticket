@@ -7,19 +7,19 @@ from bs4 import BeautifulSoup
 
 class NetworkTool:
     # 专家id
-    e_id = '46'
+    e_id = '1100'
     # 日期
-    book_date = '2023-05-25'
+    book_date = '2023-05-26'
     # 病人id
-    patient_id = '122559'
+    patient_id = '113880'
     # 病人账号
-    phoneNumber = '18271400500'
+    phoneNumber = '15800324596'
     # 病人密码
-    password = '171113'
+    password = '199018'
     # 身份证
-    idCard = '420104195707050813'
+    idCard = '420983199006207248'
     # 姓名
-    patient_name = '谭志来'
+    patient_name = '吴花'
 
     # # 专家id
     # e_id = '1100'
