@@ -99,11 +99,10 @@ def buy(patient):
     tool.startBook()
 
 
-user1 = User('1100', '2023-05-29', '31178', '15107139930', '159753', '420103199311043715', '涂谦')
-user2 = User('1100', '2023-05-31', '122210', '18986956850', 'hqz040911', '429005200407270024', '何沁芷')
+user1 = User('1100', '2023-06-02', '123522', '18827393510', '123456', '420104195704090414', '凃新桥')
 
 threads = []
-userList = [user1, user2]
+userList = [user1]
 for user in userList:
     thread = threading.Thread(target=buy, args=(user,))
     threads.append(thread)
