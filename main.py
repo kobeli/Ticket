@@ -73,8 +73,8 @@ class NetworkTool:
             print(emailError)
 
     def startBook(self):
-        try:
-            while True:
+        while True:
+            try:
                 print("Start {} \n".format(self.user.patient_name))
                 self.login()
                 hasTicket = self.get_available_ticket()
@@ -87,8 +87,9 @@ class NetworkTool:
                 else:
                     print('No tickets \n')
                 time.sleep(1.0)
-        except Exception as e:
-            print(e)
+            except Exception as e:
+                print(e)
+                continue
 
 
 def buy(patient):
@@ -98,9 +99,10 @@ def buy(patient):
 
 user1 = User('1100', '2023-06-08', '124121', '18672190607', 'chengyan9067', '42010520200103321X', '王宇承')
 user2 = User('1100', '2023-06-09', '121181', '15997118108', 'ghy109876', '420204196906194924', '高海燕')
+user3 = User('9469', '2023-06-10', '1777', '13667199202', '222535', '420104199006121621', '刘怡颖')
 
 threads = []
-userList = [user1, user2]
+userList = [user1, user2, user3]
 for user in userList:
     thread = threading.Thread(target=buy, args=(user,))
     threads.append(thread)
