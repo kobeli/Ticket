@@ -43,6 +43,8 @@ class NetworkTool:
             elif "停诊" in tag.text:
                 print('停诊', the_tag_date)
             else:
+                if len(self.user.book_date) != 0 and self.user.book_date not in the_tag_date:
+                    return False
                 js_func_string = str(tag['onclick']).replace('checkidCard (', '').replace(')', '').split(',')
                 print('Ticket:' + str(js_func_string))
                 self.d_id = js_func_string[0]
@@ -97,9 +99,9 @@ def buy(patient):
     tool.startBook()
 
 
-user1 = User('1100', '2023-06-08', '124121', '18672190607', 'chengyan9067', '42010520200103321X', '王宇承')
-user2 = User('1100', '2023-06-09', '121181', '15997118108', 'ghy109876', '420204196906194924', '高海燕')
-user3 = User('9469', '2023-06-10', '1777', '13667199202', '222535', '420104199006121621', '刘怡颖')
+user1 = User('1100', '', '124121', '18672190607', 'chengyan9067', '42010520200103321X', '王宇承')
+user2 = User('1100', '', '121181', '15997118108', 'ghy109876', '420204196906194924', '高海燕')
+user3 = User('1100', '2023-06-15', '70889', '13265844618', 'du2105060', '420621199306189218', '杜夕夏')
 
 threads = []
 userList = [user1, user2, user3]
