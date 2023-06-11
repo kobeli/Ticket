@@ -84,8 +84,8 @@ class NetworkTool:
                     print('hasTicket \n')
                     succeed = self.book()
                     if succeed:
-                        print('Book succeed \n')
                         self.sendEmail()
+                        print('Book succeed \n')
                 else:
                     print('No tickets \n')
                 time.sleep(1.0)
@@ -99,11 +99,12 @@ def buy(patient):
     tool.startBook()
 
 
-user1 = User('1100', '', '107926', '15071006177', 'yzt012288', '420112198801222785', '王董哲琪')
-user2 = User('1100', '2023-06-18', '70889', '13265844618', 'du2105060', '420621199306189218', '杜夕夏')
+user1 = User('1100', '2023-06-17', '70889', '13265844618', 'du2105060', '420621199306189218', '杜夕夏')
+user2 = User('1100', '2023-06-17', '109611', '13986083850', '591860', '441900198408025884', '黄晗')
+user3 = User('1100', '2023-06-17', '62178', '15171154030', '154030', '421003198710090528', '徐晓航')
 
 threads = []
-userList = [user1, user2]
+userList = [user1, user2, user3]
 for user in userList:
     thread = threading.Thread(target=buy, args=(user,))
     threads.append(thread)
