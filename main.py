@@ -43,8 +43,9 @@ class NetworkTool:
             elif "停诊" in tag.text:
                 print('停诊', the_tag_date)
             else:
+                print('other', the_tag_date)
                 if len(self.user.book_date) != 0 and self.user.book_date not in the_tag_date:
-                    return False
+                    continue
                 js_func_string = str(tag['onclick']).replace('checkidCard (', '').replace(')', '').split(',')
                 print('Ticket:' + str(js_func_string))
                 self.d_id = js_func_string[0]
@@ -99,12 +100,14 @@ def buy(patient):
     tool.startBook()
 
 
-user1 = User('1100', '2023-06-17', '70889', '13265844618', 'du2105060', '420621199306189218', '杜夕夏')
-user2 = User('1100', '2023-06-17', '109611', '13986083850', '591860', '441900198408025884', '黄晗')
-user3 = User('1100', '2023-06-17', '62178', '15171154030', '154030', '421003198710090528', '徐晓航')
+user1 = User('1100', '2023-06-17', '109611', '13986083850', '591860', '441900198408025884', '黄晗')
+user2 = User('1100', '2023-06-17', '62178', '15171154030', '154030', '421003198710090528', '徐晓航')
+user3 = User('1100', '2023-06-14', '122305', '18986956886', '123456', '429005197702090427', '张莉')
+user4 = User('1100', '2023-06-14', '122210', '18986956850', 'hqz040911', '429005200407270024', '何沁芷')
+user5 = User('1100', '', '106918', '18762388338', '991226', '320902199912260014', '季方昊')
 
 threads = []
-userList = [user1, user2, user3]
+userList = [user1, user2, user3, user4,user5]
 for user in userList:
     thread = threading.Thread(target=buy, args=(user,))
     threads.append(thread)
